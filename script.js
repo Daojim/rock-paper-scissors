@@ -1,5 +1,3 @@
-console.log("Hello World");
-
 function getComputerChoice() {
   let computerChoice;
   let rng = Math.round(Math.random() * 100);
