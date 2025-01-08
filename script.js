@@ -37,3 +37,7 @@ function getHumanChoice() {
 }
 
 getHumanChoice();
+
+//Scoring
+let humanScore = 0;
+let computerScore = 0;
