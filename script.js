@@ -23,21 +23,20 @@ function getHumanChoice() {
   let valid = 0;
   while (valid < 1) {
     humanChoice = prompt("rock, paper, or scissors?");
-    if (
-      humanChoice.toLowerCase() === "rock" ||
-      humanChoice.toLowerCase() === "paper" ||
-      humanChoice.toLowerCase() === "scissors"
-    ) {
-      valid = 1;
+    if (humanChoice.toLowerCase() === "rock") {
+      return (humanChoice = "rock");
+    } else if (humanChoice.toLowerCase() === "paper") {
+      return (humanChoice = "paper");
+    } else if (humanChoice.toLowerCase() === "scissors") {
+      return (humanChoice = "scissors");
     } else {
       console.log("Invalid choice, try again");
     }
   }
-  console.log(humanChoice);
 }
 
 getHumanChoice();
-console.log(getComputerChoice.computerChoice);
+console.log(humanChoice);
 
 //Scoring
 let humanScore = 0;
