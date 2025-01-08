@@ -11,4 +11,25 @@ Use Math.random()
 
 Create a function named getHumanChoice
 it must validate to "rock", "paper" or "scissors"
-use prompt()
+use prompt() to receive input from user
+let valid = 0;
+
+while (valid != 1){
+humanChoice = prompt("rock, paper, or scissors?")
+if humanChoice.toLowerCase === "rock" || "paper" || "scissors"
+    valid = 1
+
+elif humanChoice.toLowerCase === "r"
+    humanChoice = "rock";
+    valid = 1;
+elif humanChoice.toLowerCase === "p"
+    humanChoice = "paper";
+    valid = 1;
+elif humanChoice.toLowerCase === "s"
+    humanChoice = "scissor"
+    valid = 1;
+else
+    clg("invalid choice")
+}
+-----------------------------------------------------------------------------------
+
