@@ -76,7 +76,14 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-  getComputerChoice();
-  getHumanChoice();
-  playRound(humanChoice, computerChoice);
+  let counter = 0;
+  while (counter < 5) {
+    getComputerChoice();
+    getHumanChoice();
+    playRound(humanChoice, computerChoice);
+    counter++;
+  }
+  console.log("Thanks for playing!");
 }
+
+playGame();
