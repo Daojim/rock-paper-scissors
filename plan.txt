@@ -1,0 +1,11 @@
+Create a function named getComputerChoice to return one of the following string values: 
+"rock", "paper", or "scissors"
+
+let computerChoice;
+Use Math.random()
+    - if (0 - 0.33), computerChoice = "rock"
+    - if (0.34-0.66), computerChoice = "paper"
+    - if (0.67 - 0.99), computerChoice = "scissors"
+
+-----------------------------------------------------------------------------------
+
