@@ -9,3 +9,6 @@ Use Math.random()
 
 -----------------------------------------------------------------------------------
 
+Create a function named getHumanChoice
+it must validate to "rock", "paper" or "scissors"
+use prompt()
