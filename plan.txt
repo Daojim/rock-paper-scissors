@@ -15,7 +15,7 @@ use prompt() to receive input from user
 let valid = 0;
 
 while (valid != 1){
-humanChoice = prompt("rock, paper, or scissors?")
+let humanChoice = prompt("rock, paper, or scissors?")
 if humanChoice.toLowerCase === "rock" || "paper" || "scissors"
     valid = 1
 
@@ -33,3 +33,34 @@ else
 }
 -----------------------------------------------------------------------------------
 
+Declare the players score variables
+let humanScore = 0;
+let computerScore = 0;
+
+-----------------------------------------------------------------------------------
+
+Logic to play a single round
+create function named playRound
+playRound (humanChoice, computerChoice){
+
+    if (humanChoice === omputerChoice)
+        clg(Tie)
+    if (humanChoice === "rock" && computerChoice === "paper")
+        clg("You lose")
+        computerScore++
+    if (humanChoice === "rock" && computerChoice === "scissors")
+        clg("You win")
+        humanScore++
+    if (humanChoice === "paper" && computerChoice === "rock")
+        clg("You win")
+        humanScore++
+    if (humanchoice === "paper" && computerChoice === "scissors")
+        clg("You lose")
+        computerScore++
+    if (humanChoice === "scissors" && computerChoice === "rock")
+        clg("You lose")
+        computerScore++
+    if (humanChoice === "scissors" && computerChoice === "paper")
+        clg("You win")
+        humanScore++
+}
