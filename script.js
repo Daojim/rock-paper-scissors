@@ -14,9 +14,6 @@ function getComputerChoice() {
   }
 }
 
-getComputerChoice();
-console.log(computerChoice);
-
 //Function for user picking
 let humanChoice;
 function getHumanChoice() {
@@ -34,9 +31,6 @@ function getHumanChoice() {
     }
   }
 }
-
-getHumanChoice();
-console.log(humanChoice);
 
 //Scoring
 let humanScore = 0;
@@ -81,4 +75,8 @@ function playRound(humanChoice, computerChoice) {
   getScores();
 }
 
-playRound(humanChoice, computerChoice);
+function playGame() {
+  getComputerChoice();
+  getHumanChoice();
+  playRound(humanChoice, computerChoice);
+}
