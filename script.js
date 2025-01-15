@@ -81,9 +81,6 @@ rockBtn.addEventListener("click", () => {
 });
 
 const paperBtn = document.querySelector("#paperBtn");
-paperBtn.addEventListener("click", () => {
-  alert("Paper Button clicked");
-});
 
 const scissorsBtn = document.querySelector("#scissorsBtn");
 
