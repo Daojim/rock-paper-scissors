@@ -66,7 +66,10 @@ clearBtn.addEventListener("click", () => {
 
 //Play a round
 function playRound(humanChoice, computerChoice) {
+  battle.classList.add("battle");
+  battle.textContent = "The following choices were made: ";
   results.appendChild(battle);
+
   console.log(humanChoice);
   const playerChoice = document.createElement("p");
   battle.classList.add("playerChoice");
