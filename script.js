@@ -32,13 +32,30 @@ function getHumanChoice() {
   }
 }
 
+const results = document.querySelector("#results");
+
+const content = document.createElement("div");
+
 //Scoring
 let humanScore = 0;
 let computerScore = 0;
 function getScores() {
+  content.classList.add("content");
+  content.textContent = "The score is: ";
+  results.appendChild(content);
   console.log("The score is: ");
+
+  const playerScore = document.createElement("p");
+  content.classList.add("playerScore");
+  playerScore.textContent = "Your score: " + humanScore;
+  results.appendChild(playerScore);
   console.log("Your score: " + humanScore);
+
+  const cpuScore = document.createElement("p");
+  content.classList.add("cpuScore");
+  cpuScore.textContent = "Computer Score: " + computerScore;
   console.log("Computer Score: " + computerScore);
+  results.appendChild(cpuScore);
 }
 
 //Play a round
