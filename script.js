@@ -75,17 +75,17 @@ function playRound(humanChoice, computerChoice) {
   getScores();
 }
 
-//Function to play the game
-function playGame() {
-  let counter = 0; //Initialize counter to 0
-  while (counter < 5) {
-    //Breaks loop once game is played 5 times
-    getComputerChoice();
-    getHumanChoice();
-    playRound(humanChoice, computerChoice);
-    counter++;
-  }
-  console.log("Thanks for playing!");
-}
+// //Function to play the game
+// function playGame() {
+//   let counter = 0; //Initialize counter to 0
+//   while (counter < 5) {
+//     //Breaks loop once game is played 5 times
+//     getComputerChoice();
+//     getHumanChoice();
+//     playRound(humanChoice, computerChoice);
+//     counter++;
+//   }
+//   console.log("Thanks for playing!");
+// }
 
-playGame();
+// playGame();
