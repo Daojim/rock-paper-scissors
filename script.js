@@ -35,7 +35,6 @@ function getHumanChoice() {
 const results = document.querySelector("#results");
 const battle = document.createElement("div");
 const content = document.createElement("div");
-const final = document.createElement("div");
 
 //Scoring
 let humanScore = 0;
@@ -45,10 +44,12 @@ function getScores() {
   content.textContent = "The current score is: ";
   if (humanScore == 5) {
     alert("You were the first to reach 5 points! You win!");
+    reset();
   }
 
   if (computerScore == 5) {
     alert("The computer got to 5 points first! You lose!");
+    reset();
   }
   results.appendChild(content);
 
@@ -61,6 +62,13 @@ function getScores() {
   content.classList.add("cpuScore");
   cpuScore.textContent = "Computer Score: " + computerScore;
   content.appendChild(cpuScore);
+}
+
+function reset() {
+  content.remove();
+  battle.remove();
+  humanScore = 0;
+  computerScore = 0;
 }
 
 //Play a round
