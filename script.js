@@ -63,15 +63,6 @@ function getScores() {
   content.appendChild(cpuScore);
 }
 
-function clearScores() {
-  content.remove();
-}
-
-const clearBtn = document.querySelector("#clearBtn");
-clearBtn.addEventListener("click", () => {
-  clearScores();
-});
-
 //Play a round
 function playRound(humanChoice, computerChoice) {
   battle.classList.add("battle");
