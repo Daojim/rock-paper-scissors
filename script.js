@@ -44,11 +44,11 @@ function getScores() {
   content.classList.add("content");
   content.textContent = "The current score is: ";
   if (humanScore == 5) {
-    content.textContent = "You were the first to reach 5 points! You win!";
+    alert("You were the first to reach 5 points! You win!");
   }
 
   if (computerScore == 5) {
-    content.textContent = "The computer got to 5 points first! You lose!";
+    alert("The computer got to 5 points first! You lose!");
   }
   results.appendChild(content);
 
