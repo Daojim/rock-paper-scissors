@@ -81,8 +81,14 @@ rockBtn.addEventListener("click", () => {
 });
 
 const paperBtn = document.querySelector("#paperBtn");
+paperBtn.addEventListener("click", () => {
+  playRound("paper", getComputerChoice());
+});
 
 const scissorsBtn = document.querySelector("#scissorsBtn");
+scissorsBtn.addEventListener("click", () => {
+  playRound("scissors", getComputerChoice());
+});
 
 // //Function to play the game
 // function playGame() {
