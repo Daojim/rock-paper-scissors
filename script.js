@@ -33,7 +33,7 @@ function getHumanChoice() {
 }
 
 const results = document.querySelector("#results");
-const battle = document.querySelector("#battle");
+const battle = document.createElement("div");
 const content = document.createElement("div");
 
 //Scoring
@@ -43,18 +43,15 @@ function getScores() {
   content.classList.add("content");
   content.textContent = "The score is: ";
   results.appendChild(content);
-  console.log("The score is: ");
 
   const playerScore = document.createElement("p");
   content.classList.add("playerScore");
   playerScore.textContent = "Your score: " + humanScore;
   content.appendChild(playerScore);
-  console.log("Your score: " + humanScore);
 
   const cpuScore = document.createElement("p");
   content.classList.add("cpuScore");
   cpuScore.textContent = "Computer Score: " + computerScore;
-  console.log("Computer Score: " + computerScore);
   content.appendChild(cpuScore);
 }
 
@@ -69,17 +66,21 @@ clearBtn.addEventListener("click", () => {
 
 //Play a round
 function playRound(humanChoice, computerChoice) {
+  results.appendChild(battle);
   console.log(humanChoice);
   const playerChoice = document.createElement("p");
+  battle.classList.add("playerChoice");
   playerChoice.textContent = "You have chosen " + humanChoice;
   battle.appendChild(playerChoice);
 
   const cpuChoice = document.createElement("p");
+  battle.classList.add("cpuChoice");
   cpuChoice.textContent = "Computer has chosen " + computerChoice;
   console.log(computerChoice);
   battle.appendChild(cpuChoice);
 
   const battleResult = document.createElement("p");
+  battle.classList.add("battleResult");
   if (humanChoice === computerChoice) {
     battleResult.textContent = "It's a tie!";
     console.log("It's a tie");
