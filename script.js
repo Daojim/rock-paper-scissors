@@ -48,15 +48,24 @@ function getScores() {
   const playerScore = document.createElement("p");
   content.classList.add("playerScore");
   playerScore.textContent = "Your score: " + humanScore;
-  results.appendChild(playerScore);
+  content.appendChild(playerScore);
   console.log("Your score: " + humanScore);
 
   const cpuScore = document.createElement("p");
   content.classList.add("cpuScore");
   cpuScore.textContent = "Computer Score: " + computerScore;
   console.log("Computer Score: " + computerScore);
-  results.appendChild(cpuScore);
+  content.appendChild(cpuScore);
 }
+
+function clearScores() {
+  content.remove();
+}
+
+const clearBtn = document.querySelector("#clearBtn");
+clearBtn.addEventListener("click", () => {
+  clearScores();
+});
 
 //Play a round
 function playRound(humanChoice, computerChoice) {
