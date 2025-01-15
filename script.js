@@ -33,7 +33,7 @@ function getHumanChoice() {
 }
 
 const results = document.querySelector("#results");
-
+const battle = document.querySelector("#battle");
 const content = document.createElement("div");
 
 //Scoring
