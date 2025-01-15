@@ -70,34 +70,51 @@ clearBtn.addEventListener("click", () => {
 //Play a round
 function playRound(humanChoice, computerChoice) {
   console.log(humanChoice);
+  const playerChoice = document.createElement("p");
+  playerChoice.textContent = "You have chosen " + humanChoice;
+  battle.appendChild(playerChoice);
+
+  const cpuChoice = document.createElement("p");
+  cpuChoice.textContent = "Computer has chosen " + computerChoice;
   console.log(computerChoice);
+  battle.appendChild(cpuChoice);
+
+  const battleResult = document.createElement("p");
   if (humanChoice === computerChoice) {
+    battleResult.textContent = "It's a tie!";
     console.log("It's a tie");
   }
   if (humanChoice === "rock" && computerChoice === "paper") {
+    battleResult.textContent = "You lose!";
     console.log("You lose!");
     computerScore++;
   }
   if (humanChoice === "rock" && computerChoice === "scissors") {
+    battleResult.textContent = "You win!";
     console.log("You win!");
     humanScore++;
   }
   if (humanChoice === "paper" && computerChoice === "rock") {
+    battleResult.textContent = "You win!";
     console.log("You win!");
     humanScore++;
   }
   if (humanChoice === "paper" && computerChoice === "scissors") {
     console.log("You lose!");
+    battleResult.textContent = "You lose!";
     computerScore++;
   }
   if (humanChoice === "scissors" && computerChoice === "rock") {
     console.log("You lose!");
+    battleResult.textContent = "You lose!";
     computerScore++;
   }
   if (humanChoice === "scissors" && computerChoice === "paper") {
+    battleResult.textContent = "You win!";
     console.log("You win!");
     humanScore++;
   }
+  battle.appendChild(battleResult);
   getScores();
 }
 
