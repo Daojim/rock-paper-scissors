@@ -75,6 +75,18 @@ function playRound(humanChoice, computerChoice) {
   getScores();
 }
 
+const rockBtn = document.querySelector("#rockBtn");
+rockBtn.addEventListener("click", () => {
+  playRound("rock", getComputerChoice());
+});
+
+const paperBtn = document.querySelector("#paperBtn");
+paperBtn.addEventListener("click", () => {
+  alert("Paper Button clicked");
+});
+
+const scissorsBtn = document.querySelector("#scissorsBtn");
+
 // //Function to play the game
 // function playGame() {
 //   let counter = 0; //Initialize counter to 0
